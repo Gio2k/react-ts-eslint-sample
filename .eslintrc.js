@@ -5,7 +5,9 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb',
+    "airbnb-typescript",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -14,6 +16,7 @@ module.exports = {
     },
     ecmaVersion: 12,
     sourceType: 'module',
+    project: "./tsconfig.json"
   },
   plugins: [
     'react',
@@ -25,5 +28,6 @@ module.exports = {
     }
   },
   rules: {
+    "react/jsx-one-expression-per-line" : "off"
   },
 };
